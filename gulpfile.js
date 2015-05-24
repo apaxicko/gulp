@@ -7,6 +7,9 @@ var gulp = require('gulp'),
 	livereload = require('gulp-livereload'),
 	connect = require('gulp-connect'),
 	uglify = require('gulp-uglify'),
+	csso = require('gulp-csso'),
+	rename = require("gulp-rename"),
+	notify = require("gulp-notify"),
 	plugins = require('gulp-load-plugins')();
 
 gulp.task('connect', function() {
@@ -17,13 +20,15 @@ gulp.task('connect', function() {
 });
 
 gulp.task('less', function () {
-  	return gulp.src('src/less/all.less')
+  	gulp.src('src/less/all.less')
 	    .pipe(less({
 	    	paths: [ path.join(__dirname, 'less', 'includes') ]
 	    }))
-	    .pipe(gulp.dest('public/css'))
-	    .pipe(minifyCss({compatibility: 'ie8'}))
-	    .pipe(connect.reload());
+	    .pipe(csso())
+	    .pipe(rename({suffix: ".min"}))
+        .pipe(gulp.dest('./public/css/'))
+	    .pipe(connect.reload())
+	    .pipe(notify('Success!'));
 });
 
 gulp.task('uglify', function() {
