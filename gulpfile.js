@@ -3,7 +3,6 @@
 var gulp = require('gulp'),
 	less = require('gulp-less'),
 	path = require('path'),
-	minifyCss = require('gulp-minify-css'),
 	livereload = require('gulp-livereload'),
 	connect = require('gulp-connect'),
 	uglify = require('gulp-uglify'),

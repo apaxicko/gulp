@@ -59,6 +59,11 @@
 			color: #000;
 			display: inline-block;
 			padding: 5px;
+			i {
+				&:before {
+					display: inline-block;
+				}
+			}
 			&.active {
 				background: #ebebeb;
 			}
@@ -84,6 +89,9 @@
 		background: #f5f5f5;
 		margin-right: 2px;
 		cursor: pointer;
+		&:last-child {
+			padding: 5px 7px;	
+		}
 		&:hover {
 			background: #e5e5e5;
 		}
