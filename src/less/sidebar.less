@@ -1,0 +1,53 @@
+.sidebar {
+	width: 232px;
+	float: left;
+	.filter {
+		width: 100%;
+		background: #faf9f8;
+		border-radius: 4px;
+		border: 1px solid #e2e3e4;
+		border-top: none;
+		overflow: hidden;
+		padding-bottom: 25px;
+		&__title {
+			font-size: .84rem;
+			font-weight: bold;
+			height: 30px;
+			line-height: 30px;
+			color: #fff;
+			background: linear-gradient(to bottom, #405e7f 0%, #2d425a 100%);
+			padding-left: 10px;
+		}
+		&__layer {
+			padding: 10px 20px 0;
+			&_title {
+				font-weight: bold;
+				font-size: .84rem;
+			}
+		}
+		&__list {
+			list-style: none;
+			margin: 5px 0 0;
+			padding: 0;
+			font-size: .8rem;
+		}
+		&__item {
+			margin-bottom: 1px;
+			&-count {
+				color: #aaa;
+				font-style: normal;
+				margin-left: 3px;
+			}	
+		}
+		&__more {
+			color: #000;
+			font-size: .8rem;
+			&_link {
+				color: #000;
+				text-decoration: none;
+				border-bottom: 1px dotted #000;	
+				margin-left: 15px;
+			}
+		}
+	}
+}
